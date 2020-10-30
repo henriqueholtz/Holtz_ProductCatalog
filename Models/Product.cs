@@ -3,15 +3,15 @@ using System;
 namespace Holtz_ProductCatalog.Models
 {
     public class Product {
-        public int Id { get; set; } //Code
-        public string Title { get; set; } //Title
-        public string Description { get; set; } //Description
-        public decimal Price { get; set; } //Price
+        public int Id { get; set; } 
+        public string Title { get; set; } 
+        public string Description { get; set; } 
+        public decimal Price { get; set; }
         public int Quantity { get; set; }
         public string Image { get; set; }
-        public DateTime InsertDate { get; set; } //Insert Date
-        public DateTime UpdateDate { get; set; } //Update Date
-        public int CategoryId { get; set; } //Category Code
-        public Category Category { get; set; } //Category
+        public DateTime InsertDate { get; set; } 
+        public DateTime UpdateDate { get; set; }
+        public int CategoryId { get; set; } 
+        public Category Category { get; set; } 
     }
 }

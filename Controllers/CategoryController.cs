@@ -13,19 +13,19 @@ namespace Holtz_ProductCatalog.Controllers {
             _context = context;
         }
 
-        [Route("v1/categories)")]
+        [Route("v1/categories")]
         [HttpGet]
-        public IEnumerable<Category> Get() {
+        public List<Category> Get() {
             return _context.Categories.AsNoTracking().ToList();
         }
 
-        [Route("v1/categories/{id})")]
+        [Route("v1/categories/{id}")]
         [HttpGet]
         public Category Get(int id) {
             return _context.Categories.AsNoTracking().Where(x => x.Id == id).FirstOrDefault();
         }
         
-        [Route("v1/categories/{id}/products)")]
+        [Route("v1/categories/{id}/products")]
         [HttpGet]
         public IEnumerable<Product> GetProducts(int id) {
             return _context.Products.AsNoTracking().Where(x => x.CategoryId == id).ToList();
